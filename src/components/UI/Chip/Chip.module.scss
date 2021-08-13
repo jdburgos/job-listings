@@ -9,7 +9,7 @@
   line-height: 1;
   margin: 0 6px;
   padding: 8px 6px;
-  transition: background-color .5s, color .5s;
+  transition: background-color 0.5s, color 0.5s;
 
   &:hover {
     background-color: var(--c-desaturated-dark-cyan);

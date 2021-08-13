@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 /** Styles **/
 import styles from './Tag.module.scss';
 
-export const Tag = props =>  {
+export const Tag = props => {
   const type = props.featured ? styles['tag--featured'] : '';
   const className = props.className ? props.className : '';
   const classes = `${styles.tag} ${type} ${className}`.trim();
