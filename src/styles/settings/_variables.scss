@@ -1,0 +1,13 @@
+:root {
+  --f-primary: 'Spartan';
+  --f-size: 15px;
+  --c-desaturated-dark-cyan: hsl(180, 29%, 50%);
+  --c-light-grayish-cyan: hsl(180, 52%, 96%);
+  --c-dark-grayish-cyan: hsl(180, 8%, 52%);
+  --c-very-dark-grayish-cyan: hsl(180, 14%, 20%);
+}
+
+// Breakpoints
+$b-small: 576px;
+$b-medium: 768px;
+$b-xlarge: 1200px;
