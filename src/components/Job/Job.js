@@ -27,12 +27,15 @@ export const Job = props => {
             <span className={styles['job__subtitle']}>{props.job.company}</span>
             <div className={styles['job__labels']}>
               {props.job.new && <Tag className={styles['job__label']} text="NEW!" />}
-              {props.job.featured && <Tag className={styles['job__label']} text="FEATURED" featured />}
+              {props.job.featured && (
+                <Tag className={styles['job__label']} text="FEATURED" featured />
+              )}
             </div>
           </div>
           <h3 className={styles['job__title']}>{props.job.position}</h3>
           <div className={styles['job__description']}>
-            <span>{props.job.postedAt}</span> &nbsp; • &nbsp; <span>{props.job.contract}</span> &nbsp; • &nbsp; <span>{props.job.location}</span>
+            <span>{props.job.postedAt}</span> &nbsp; • &nbsp; <span>{props.job.contract}</span>{' '}
+            &nbsp; • &nbsp; <span>{props.job.location}</span>
           </div>
         </div>
       </div>
