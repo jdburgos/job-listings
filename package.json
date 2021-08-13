@@ -2,6 +2,7 @@
   "name": "job-listings",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/job-listings",
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^5.14.1",
@@ -50,7 +51,9 @@
     "prettier": "npx prettier --write .",
     "stylelint": "npx stylelint '**/*.scss' --fix",
     "format": "npm run prettier && npm run stylelint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+    "deploy": "npx gh-pages -b page -d build"
   },
   "eslintConfig": {
     "extends": [
