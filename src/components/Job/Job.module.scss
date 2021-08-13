@@ -1,0 +1,74 @@
+.job {
+  $job: &;
+
+  align-items: center;
+  display: flex;
+  margin-bottom: 20px;
+  padding: 20px 25px;
+  position: relative;
+  transition: transform 0.8s;
+
+  &:hover {
+    transform: scale(1.05);
+
+    &:before {
+      background-color: var(--c-desaturated-dark-cyan);
+      border-radius: 5px 0 0 5px;
+      bottom: 0;
+      content: '';
+      display: block;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 5px;
+    }
+
+    #{$job}__title {
+      color: var(--c-desaturated-dark-cyan);
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__logo {
+    margin-right: 15px;
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+  }
+
+  &__subtitle {
+    color: var(--c-desaturated-dark-cyan);
+    font-size: 12px;
+    font-weight: 700;
+    margin-right: 10px;
+  }
+
+  &__labels {
+    align-items: center;
+    display: flex;
+  }
+
+  &__title {
+    color: var(--c-very-dark-grayish-cyan);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px 0;
+    transition: color 0.8s;
+  }
+
+  &__description {
+    color: var(--c-dark-grayish-cyan);
+    font-size: 13px;
+  }
+
+  &__tags {
+    display: flex;
+    margin-left: auto;
+  }
+}

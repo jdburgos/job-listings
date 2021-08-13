@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 
 /** Components **/
-import App from './App';
+import { JobList } from './JobList';
 
-describe('App', () => {
+describe('JobList', () => {
   test('should renders without crashing', () => {
     const div = document.createElement('div');
 
-    ReactDOM.render(<App />, div);
+    ReactDOM.render(<JobList />, div);
   });
 });

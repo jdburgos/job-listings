@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 
 /** Components **/
-import App from './App';
+import { Wrapper } from './Wrapper';
 
-describe('App', () => {
+describe('Wrapper', () => {
   test('should renders without crashing', () => {
     const div = document.createElement('div');
 
-    ReactDOM.render(<App />, div);
+    ReactDOM.render(
+      <Wrapper>
+        <div>Wrapper</div>
+      </Wrapper>,
+      div,
+    );
   });
 });

@@ -1,0 +1,14 @@
+.tag {
+  background-color: var(--c-desaturated-dark-cyan);
+  border-radius: 9px;
+  color: var(--c-light-grayish-cyan);
+  font-size: 10px;
+  font-weight: 700;
+  height: 8px;
+  margin: 0 2px;
+  padding: 5px 7px;
+
+  &--featured {
+    background-color: var(--c-very-dark-grayish-cyan);
+  }
+}
