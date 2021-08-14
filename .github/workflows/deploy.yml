@@ -19,7 +19,7 @@ jobs:
         run: npm install
       - name: Build page
         run: npm run build
-      - name: Deploy to page
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
