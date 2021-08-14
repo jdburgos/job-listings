@@ -53,7 +53,7 @@
     "format": "npm run prettier && npm run stylelint",
     "prepare": "husky install",
     "predeploy": "npm run build",
-    "deploy": "npx gh-pages -b page -d build"
+    "deploy": "npx gh-pages -b gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
