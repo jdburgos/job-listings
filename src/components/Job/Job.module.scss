@@ -1,10 +1,12 @@
+@import "src/styles/settings/variables";
+
 .job {
   $job: &;
 
-  align-items: center;
   display: flex;
-  margin-bottom: 20px;
-  padding: 20px 25px;
+  flex-direction: column;
+  margin-bottom: 40px;
+  padding: 40px 25px 20px;
   position: relative;
   transition: transform 0.8s;
 
@@ -33,7 +35,31 @@
   }
 
   &__logo {
-    margin-right: 15px;
+    max-width: 50px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+
+    @media only screen and (min-width: $b-medium) {
+      margin-right: 15px;
+      max-width: 60px;
+      position: static;
+    }
+  }
+
+  &__container {
+    &:after {
+      background-color: var(--c-dark-grayish-cyan);
+      content: '';
+      display: block;
+      height: 1px;
+      margin-top: 15px;
+      width: 100%;
+
+      @media only screen and (min-width: $b-medium) {
+        display: none;
+      }
+    }
   }
 
   &__header {
@@ -69,6 +95,30 @@
 
   &__tags {
     display: flex;
-    margin-left: auto;
+    flex-wrap: wrap;
+
+    @media only screen and (min-width: $b-medium) {
+      margin-left: auto;
+      flex-wrap: initial;
+    }
+  }
+
+  &__tag {
+    margin: 15px 15px 0 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media only screen and (min-width: $b-medium) {
+      margin: 0 6px;
+    }
+  }
+
+  @media only screen and (min-width: $b-medium) {
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding: 20px 25px;
   }
 }

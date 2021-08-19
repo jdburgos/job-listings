@@ -12,7 +12,7 @@ import styles from './Job.module.scss';
 
 export const Job = props => {
   const tags = [props.job.role, props.job.level, ...props.job.languages];
-  const content = tags.map((tag, index) => <Chip key={index} text={tag} />);
+  const content = tags.map((tag, index) => <Chip key={index} className={styles['job__tag']} text={tag} />);
 
   return (
     <Card className={styles['job']}>
