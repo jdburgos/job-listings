@@ -98,8 +98,8 @@
     flex-wrap: wrap;
 
     @media only screen and (min-width: $b-medium) {
+      justify-content: flex-end;
       margin-left: auto;
-      flex-wrap: initial;
     }
   }
 
@@ -111,7 +111,7 @@
     }
 
     @media only screen and (min-width: $b-medium) {
-      margin: 0 6px;
+      margin: 6px;
     }
   }
 
