@@ -1,7 +1,7 @@
 @import 'src/styles/settings/variables';
 
 .job-list {
-  margin: 40px auto 0;
+  margin: 40px auto 20px;
   max-width: 85%;
 
   @media only screen and (min-width: $b-medium) {
