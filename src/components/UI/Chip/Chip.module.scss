@@ -7,12 +7,28 @@
   font-weight: 700;
   height: 9px;
   line-height: 1;
-  margin: 0 6px;
   padding: 8px 6px;
   transition: background-color 0.5s, color 0.5s;
+
+  &--closable {
+    border-radius: 4px 0 0 4px;
+  }
 
   &:hover {
     background-color: var(--c-desaturated-dark-cyan);
     color: var(--c-light-grayish-cyan);
+  }
+
+  &__close {
+    background-color: var(--c-desaturated-dark-cyan);
+    border-radius: 0 4px 4px 0;
+    color: var(--c-light-grayish-cyan);
+    cursor: pointer;
+    font-weight: 700;
+    padding: 4px 6px;
+
+    &:hover {
+      background-color: var(--c-very-dark-grayish-cyan);
+    }
   }
 }

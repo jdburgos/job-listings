@@ -1,0 +1,12 @@
+@import 'src/styles/settings/variables';
+
+.job-listings {
+  &__container {
+    margin: 40px auto 20px;
+    max-width: 85%;
+
+    @media only screen and (min-width: $b-medium) {
+      margin-top: 0;
+    }
+  }
+}

@@ -96,10 +96,12 @@
   &__tags {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 20px;
 
     @media only screen and (min-width: $b-medium) {
       justify-content: flex-end;
       margin-left: auto;
+      margin-top: 0;
     }
   }
 

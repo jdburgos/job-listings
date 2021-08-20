@@ -1,0 +1,39 @@
+@import 'src/styles/settings/variables';
+
+.job-filter {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 170px;
+  }
+
+  &__clear {
+    color: var(--c-dark-grayish-cyan);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--c-desaturated-dark-cyan);
+      text-decoration: underline;
+    }
+  }
+
+  &__tag {
+    align-items: center;
+    display: flex;
+    margin: 5px 6px;
+
+    @media only screen and (min-width: $b-medium) {
+      margin: 0 6px;
+    }
+  }
+
+  @media only screen and (min-width: $b-medium) {
+    margin-bottom: 30px;
+    padding: 25px 15px;
+  }
+}
