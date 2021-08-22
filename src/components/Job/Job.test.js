@@ -1,9 +1,13 @@
 /** React core **/
 import ReactDOM from 'react-dom';
 import React from 'react';
+import { Provider } from 'react-redux';
 
 /** Components **/
 import { Job } from './Job';
+
+/** Redux **/
+import store from '../../store';
 
 describe('Job', () => {
   test('should renders without crashing', () => {
@@ -16,15 +20,18 @@ describe('Job', () => {
       new: true,
       featured: true,
       position: 'Senior Frontend Developer',
-      role: 'Frontend',
-      level: 'Senior',
       postedAt: '1d ago',
       contract: 'Full Time',
       location: 'USA Only',
-      languages: ['HTML', 'CSS', 'JavaScript'],
+      tags: ['Frontend', 'Senior', 'HTML', 'CSS', 'JavaScript'],
       tools: [],
     };
 
-    ReactDOM.render(<Job job={JOB} />, div);
+    ReactDOM.render(
+      <Provider store={store}>
+        <Job job={JOB} />
+      </Provider>,
+      div
+    );
   });
 });
