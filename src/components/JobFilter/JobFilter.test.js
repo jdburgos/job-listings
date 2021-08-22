@@ -17,7 +17,7 @@ describe('JobFilter', () => {
       <Provider store={store}>
         <JobFilter />
       </Provider>,
-      div
+      div,
     );
   });
 });

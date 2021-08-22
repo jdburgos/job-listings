@@ -17,7 +17,7 @@ describe('App', () => {
       <Provider store={store}>
         <App />
       </Provider>,
-      div
+      div,
     );
   });
 });

@@ -16,8 +16,8 @@ describe('JobList', () => {
     ReactDOM.render(
       <Provider store={store}>
         <JobList />
-      </Provider>
-      , div
+      </Provider>,
+      div,
     );
   });
 });

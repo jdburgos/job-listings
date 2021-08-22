@@ -31,7 +31,7 @@ describe('Job', () => {
       <Provider store={store}>
         <Job job={JOB} />
       </Provider>,
-      div
+      div,
     );
   });
 });
