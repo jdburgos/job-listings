@@ -2,11 +2,14 @@
 
 .job-listings {
   &__container {
-    margin: 40px auto 20px;
-    max-width: 85%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -1.5%);
+    width: 85%;
 
     @media only screen and (min-width: $b-medium) {
       margin-top: 0;
+      transform: translate(-50%, -2.5%);
     }
   }
 }

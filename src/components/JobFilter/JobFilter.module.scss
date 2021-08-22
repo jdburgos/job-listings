@@ -2,6 +2,7 @@
 
 .job-filter {
   align-items: center;
+  background-color: var(--c-white);
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
@@ -15,6 +16,7 @@
   &__clear {
     color: var(--c-dark-grayish-cyan);
     cursor: pointer;
+    transition: color 0.5s;
 
     &:hover {
       color: var(--c-desaturated-dark-cyan);
