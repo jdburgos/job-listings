@@ -13,8 +13,14 @@ export const Chip = props => {
 
   return (
     <div className={classes}>
-      <span className={chipClasses} onClick={props.onClick}>{props.text}</span>
-      {props.closable && <span className={styles['chip__close']} onClick={props.onRemove}>x</span>}
+      <span className={chipClasses} onClick={props.onClick}>
+        {props.text}
+      </span>
+      {props.closable && (
+        <span className={styles['chip__close']} onClick={props.onRemove}>
+          x
+        </span>
+      )}
     </div>
   );
 };

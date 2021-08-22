@@ -8,7 +8,7 @@ import jobReducer from './job/job.reducer';
 const store = configureStore({
   reducer: {
     filter: filterReducer,
-    job: jobReducer
+    job: jobReducer,
   },
 });
 

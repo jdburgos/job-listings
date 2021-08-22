@@ -27,13 +27,21 @@ export const JobFilter = () => {
   };
 
   const content = filters.map(({ name }, index) => (
-    <Chip key={index} className={styles['job-filter__tag']} text={name} closable onRemove={removeTag.bind(null, index)} />
+    <Chip
+      key={index}
+      className={styles['job-filter__tag']}
+      text={name}
+      closable
+      onRemove={removeTag.bind(null, index)}
+    />
   ));
 
   return (
     <Card className={styles['job-filter']}>
       <div className={styles['job-filter__container']}>{content}</div>
-      <span className={styles['job-filter__clear']} onClick={clearFilters}>clear</span>
+      <span className={styles['job-filter__clear']} onClick={clearFilters}>
+        clear
+      </span>
     </Card>
   );
 };
