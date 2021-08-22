@@ -1,6 +1,9 @@
 /** React core **/
 import React from 'react';
+
+/** Dependencies **/
 import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
 
 /** Components **/
 import { Card } from '../UI/Card';
@@ -10,10 +13,24 @@ import { Tag } from '../UI/Tag';
 /** Styles **/
 import styles from './Job.module.scss';
 
+/** Actions **/
+import { filterActions } from '../../store/filter/filter.reducer';
+
 export const Job = props => {
-  const tags = [props.job.role, props.job.level, ...props.job.languages];
-  const content = tags.map((tag, index) => (
-    <Chip key={index} className={styles['job__tag']} text={tag} />
+  const filters = useSelector(state => state.filter.filters);
+  const dispatch = useDispatch();
+
+  const tagHandler = tag => {
+    !filters.map(({ name }) => name).includes(tag) && dispatch(filterActions.setFilters(tag));
+  };
+
+  const content = props.job.tags.map((tag, index) => (
+    <Chip
+      key={index}
+      className={styles['job__tag']}
+      text={tag}
+      onClick={tagHandler.bind(null, tag)}
+    />
   ));
 
   return (
@@ -54,12 +71,10 @@ Job.propTypes = {
     new: PropTypes.bool.isRequired,
     featured: PropTypes.bool.isRequired,
     position: PropTypes.string.isRequired,
-    role: PropTypes.string.isRequired,
-    level: PropTypes.string.isRequired,
     postedAt: PropTypes.string.isRequired,
     contract: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
-    languages: PropTypes.arrayOf(PropTypes.string).isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
     tools: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
 };
