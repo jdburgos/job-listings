@@ -1,6 +1,8 @@
 /** React core **/
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+/** Dependencies **/
 import { Provider } from 'react-redux';
 
 /** Redux **/

@@ -1,14 +1,13 @@
 /** React core **/
 import ReactDOM from 'react-dom';
-import React from 'react';
 
 /** Components **/
-import { Chip } from './Chip';
+import { Header } from './Header';
 
-describe('Chip', () => {
+describe('Header', () => {
   test('should renders without crashing', () => {
     const div = document.createElement('div');
 
-    ReactDOM.render(<Chip text="Test" />, div);
+    ReactDOM.render(<Header />, div);
   });
 });

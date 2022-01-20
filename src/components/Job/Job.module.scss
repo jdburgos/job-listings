@@ -13,7 +13,7 @@
   &:hover {
     transform: scale(1.05);
 
-    &:before {
+    &::before {
       background-color: var(--c-desaturated-dark-cyan);
       border-radius: 5px 0 0 5px;
       bottom: 0;
@@ -48,7 +48,7 @@
   }
 
   &__container {
-    &:after {
+    &::after {
       background-color: var(--c-dark-grayish-cyan);
       content: '';
       display: block;

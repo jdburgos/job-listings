@@ -1,6 +1,3 @@
-/** React core **/
-import React from 'react';
-
 /** Dependencies **/
 import { useSelector } from 'react-redux';
 import _ from 'lodash';
@@ -9,9 +6,15 @@ import _ from 'lodash';
 import { Container } from '../Layout/Container';
 import { Job } from '../Job';
 
+/** Store **/
+import { RootState } from '../../store';
+
+/** Interfaces **/
+import { IJobMapped } from '../../interfaces/job.interface';
+
 export const JobList = () => {
-  const filters = useSelector(state => state.filter.filters);
-  const jobList = useSelector(state => state.job.jobs);
+  const filters = useSelector((state: RootState) => state.filter.filters);
+  const jobList = useSelector((state: RootState) => state.job.jobs);
   const filtersMapped = filters.map(({ name }) => name);
   const jobsMapped = jobList.map(job => ({
     id: job.id,
@@ -26,7 +29,7 @@ export const JobList = () => {
     tags: [job.role, job.level, ...job.languages],
     tools: job.tools,
   }));
-  const jobIntersection = job =>
+  const jobIntersection = (job: IJobMapped) =>
     filtersMapped.length
       ? _.intersection(filtersMapped, job.tags).length === filtersMapped.length
       : true;

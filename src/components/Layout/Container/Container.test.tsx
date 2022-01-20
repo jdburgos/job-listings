@@ -1,14 +1,13 @@
 /** React core **/
 import ReactDOM from 'react-dom';
-import React from 'react';
 
 /** Components **/
-import { Card } from './Card';
+import { Container } from './Container';
 
-describe('Card', () => {
+describe('Container', () => {
   test('should renders without crashing', () => {
     const div = document.createElement('div');
 
-    ReactDOM.render(<Card />, div);
+    ReactDOM.render(<Container><div>Container</div></Container>, div);
   });
 });

@@ -1,18 +1,23 @@
 /** React core **/
 import ReactDOM from 'react-dom';
-import React from 'react';
+
+/** Dependencies **/
+import { Provider } from 'react-redux';
 
 /** Components **/
-import { Wrapper } from './Wrapper';
+import App from './App';
 
-describe('Wrapper', () => {
+/** Redux **/
+import store from './store';
+
+describe('App', () => {
   test('should renders without crashing', () => {
     const div = document.createElement('div');
 
     ReactDOM.render(
-      <Wrapper>
-        <div>Wrapper</div>
-      </Wrapper>,
+      <Provider store={store}>
+        <App />
+      </Provider>,
       div,
     );
   });

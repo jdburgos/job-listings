@@ -1,4 +1,7 @@
-const JOB_LIST = [
+/** Interfaces **/
+import { IJob } from '../interfaces/job.interface';
+
+const JOB_LIST: IJob[] = [
   {
     id: 1,
     company: 'Photosnap',
