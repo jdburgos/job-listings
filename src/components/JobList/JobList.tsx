@@ -1,20 +1,19 @@
 /** Dependencies **/
-import { useSelector } from 'react-redux';
 import _ from 'lodash';
 
 /** Components **/
 import { Container } from '../Layout/Container';
 import { Job } from '../Job';
 
-/** Store **/
-import { RootState } from '../../store';
+/** Hooks **/
+import { useAppSelector } from '../../hooks/react-redux';
 
 /** Interfaces **/
 import { IJobMapped } from '../../interfaces/job.interface';
 
 export const JobList = () => {
-  const filters = useSelector((state: RootState) => state.filter.filters);
-  const jobList = useSelector((state: RootState) => state.job.jobs);
+  const filters = useAppSelector(state => state.filter.filters);
+  const jobList = useAppSelector(state => state.job.jobs);
   const filtersMapped = filters.map(({ name }) => name);
   const jobsMapped = jobList.map(job => ({
     id: job.id,

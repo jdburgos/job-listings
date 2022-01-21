@@ -1,6 +1,3 @@
-/** Dependencies **/
-import { useDispatch, useSelector } from 'react-redux';
-
 /** Components **/
 import { Card } from '../UI/Card';
 import { Chip } from '../UI/Chip';
@@ -10,11 +7,13 @@ import styles from './JobFilter.module.scss';
 
 /** Actions **/
 import { removeFilter, removeFilters } from '../../store/filter/filter.reducer';
-import { AppDispatch, RootState } from '../../store';
+
+/** Hooks **/
+import { useAppDispatch, useAppSelector } from '../../hooks/react-redux';
 
 export const JobFilter = () => {
-  const dispatch = useDispatch<AppDispatch>();
-  const filters = useSelector((state: RootState) => state.filter.filters);
+  const dispatch = useAppDispatch();
+  const filters = useAppSelector(state => state.filter.filters);
 
   const removeTag = (index: number) => {
     dispatch(removeFilter(index));

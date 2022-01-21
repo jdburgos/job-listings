@@ -1,9 +1,6 @@
 /** React core **/
 import React from 'react';
 
-/** Dependencies **/
-import { useDispatch, useSelector } from 'react-redux';
-
 /** Components **/
 import { Card } from '../UI/Card';
 import { Chip } from '../UI/Chip';
@@ -18,16 +15,16 @@ import { setFilters } from '../../store/filter/filter.reducer';
 /** Styles **/
 import styles from './Job.module.scss';
 
-/** Store **/
-import { AppDispatch, RootState } from '../../store';
+/** Hooks **/
+import { useAppDispatch, useAppSelector } from '../../hooks/react-redux';
 
 type JobProps = {
   job: IJobMapped;
 };
 
 export const Job: React.FC<JobProps> = ({ job }) => {
-  const filters = useSelector((state: RootState) => state.filter.filters);
-  const dispatch = useDispatch<AppDispatch>();
+  const filters = useAppSelector(state => state.filter.filters);
+  const dispatch = useAppDispatch();
 
   const tagHandler = (tag: string) => {
     !filters.map(({ name }) => name).includes(tag) && dispatch(setFilters(tag));

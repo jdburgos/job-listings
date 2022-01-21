@@ -1,6 +1,3 @@
-/** Dependencies **/
-import { useSelector } from 'react-redux';
-
 /** Styles **/
 import './styles/styles.scss';
 import styles from './App.module.scss';
@@ -11,11 +8,11 @@ import { JobList } from './components/JobList';
 import { JobFilter } from './components/JobFilter';
 import { Container } from './components/Layout/Container';
 
-/** Store **/
-import { RootState } from './store';
+/** Hooks **/
+import { useAppSelector } from './hooks/react-redux';
 
 const App = () => {
-  const filters = useSelector((state: RootState) => state.filter.filters);
+  const filters = useAppSelector(state => state.filter.filters);
   const hasFilters = !!filters.length;
   const hasFiltersClass = hasFilters ? `${styles['job-listings--has-filters']}` : '';
   const classes = `${styles['job-listings__container']} ${hasFiltersClass}`.trim();
