@@ -8,6 +8,11 @@ describe('Container', () => {
   test('should renders without crashing', () => {
     const div = document.createElement('div');
 
-    ReactDOM.render(<Container><div>Container</div></Container>, div);
+    ReactDOM.render(
+      <Container>
+        <div>Container</div>
+      </Container>,
+      div,
+    );
   });
 });
